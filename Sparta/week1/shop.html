@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    
+        <title>SCC | Shopping Mall</title>
+    </head>
+    <style>
+        
+         @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;300;700&display=swap');
+
+        /* Reset the default values */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:MuseoModerno,sans-serif ;
+            font-weight: 600;
+            font-size: 13px;
+        }
+        
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .main{
+            width: 347px;
+           margin-top: 50px;
+          
+            padding: 10px;
+           
+
+        }
+
+        form{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+        }
+
+        img{
+            width: 100%;
+            height: 40%;
+            margin-bottom: 6px;
+            
+        }
+
+        h1{
+            display: inline;
+            font-size: 25px;
+            font-weight: 600;
+            margin-right: 5px;
+         
+        }
+
+       /* Span is  an inline element to inorder to set paragraph element below we use clear:both */
+        p{
+            clear: both;
+            margin: 11px auto;
+        }
+
+        button{
+            width: 110px;
+            border-radius:5px;
+            padding: 5px 10px;
+            margin-top: 20px;
+            background-color:#3A86FF;
+            color: white;
+           
+        }
+
+        h5{
+            padding-left: 40px;
+            font-size: 30px;
+        }
+
+        .mb-2, .my-2 {
+        margin-bottom: 1rem!important;
+        }
+
+        .input-group>.input-group-append:last-child>.btn:not(:last-child):not(.dropdown-toggle), .input-group>.input-group-append:last-child>.input-group-text:not(:last-child), .input-group>.input-group-append:not(:last-child)>.btn, .input-group>.input-group-append:not(:last-child)>.input-group-text, .input-group>.input-group-prepend>.btn, .input-group>.input-group-prepend>.input-group-text {
+         font-weight: 600;
+         border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+    </style>
+    <body>
+        <div class="main">
+            <img src="candle.jpg" alt="Candle">
+            <h1>Sparta Candles</h1><span>Price:$3 each</span>
+            <p>These candles actually have special power!</p>
+            
+            <form  href="#">
+                <!-- To take the username -->
+                <div class="input-group mb-2 mr-sm-2">
+                    <div class="input-group-prepend">
+                        <label class="input-group-text" for="Username">Your name</label>
+                    </div>
+                        <input type="text" class="form-control" id="Username" name="Username" required>
+                </div>
+
+            <!-- To take the quantity -->
+            <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="Quantity"> Quantity </label>
+                </div>
+                    <input type="number" class="form-control" id="Quantity" placeholder="-- Please select quantity --" required min="1" name="Quantity" >
+            </div>
+
+            <!-- To take the address -->
+            <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="Address"> Address</label>
+                </div>
+                    <input type="text" class="form-control" id="Address" name="Address" required>
+            </div>
+
+            <!-- To take phone number -->
+            <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="Number"> Phone number</label>
+                </div>
+                    <input type="text" class="form-control" id="Number" pattern="[0-9]{10,}" name="Number" required>
+            </div>
+
+
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Order</button>
+            </form>
+          
+        </div>
+
+     <!-- Bootstrap code for the popup  -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle"> Your order is complete! </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+       
+  </div>
+    </body>
+    
+    </html>
+ 
