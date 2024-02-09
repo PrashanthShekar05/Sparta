@@ -18,9 +18,27 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
-    
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
         <title>SCC | Shopping Mall</title>
     </head>
+   
+      
+    <script language="JavaScript">
+        // to prevent refresh of page
+        function function1(e) 
+        {
+            event.preventDefault();
+           
+            swal("Your order is complete!", "Thank you!", "success");
+            
+            
+        }
+    </script>
+        
+      <!-- Basic Styling -->
+    
     <style>
         
          @import url('https://fonts.googleapis.com/css2?family=MuseoModerno:wght@200;300;700&display=swap');
@@ -107,12 +125,12 @@
 
     </style>
     <body>
-        <div class="main">
+        <div class="main" >
             <img src="candle.jpg" alt="Candle">
             <h1>Sparta Candles</h1><span>Price:$3 each</span>
             <p>These candles actually have special power!</p>
             
-            <form  href="#">
+            <form onsubmit="function1()">
                 <!-- To take the username -->
                 <div class="input-group mb-2 mr-sm-2">
                     <div class="input-group-prepend">
@@ -126,7 +144,7 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="Quantity"> Quantity </label>
                 </div>
-                    <input type="number" class="form-control" id="Quantity" placeholder="-- Please select quantity --" required min="1" name="Quantity" >
+                    <input type="number" class="form-control" id="Quantity" placeholder="-- Please Select Quantity --" required min="1" name="Quantity" >
             </div>
 
             <!-- To take the address -->
@@ -142,28 +160,17 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="Number"> Phone number</label>
                 </div>
-                    <input type="text" class="form-control" id="Number" pattern="[0-9]{10,}" name="Number" required>
+                    <input type="text" class="form-control" id="Number" pattern="[0-9]{10,}" name="Number" title="Please Enter Your 10 Digit Number">
             </div>
-
-
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Order</button>
+                
+            <button type="submit">Order</button>
+            
             </form>
           
         </div>
+        
 
-     <!-- Bootstrap code for the popup  -->
-  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle"> Your order is complete! </h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-       
-  </div>
+    
     </body>
     
     </html>
- 
