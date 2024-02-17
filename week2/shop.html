@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="Styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
+<link rel="icon" href="images/shopping-cart.png"  type="image/x-icon">
+</head>
+
+
+<body>
+  <script src="script.js"></script>
+    <header>
+        <nav>
+            <h1>Shopy</h1>
+           
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            
+
+                <!-- adding -->
+               
+
+        </nav>
+    </header>
+
+
+
+
+    <div class="main" id="main" >
+
+      
+
+        <div class="cards">
+          <img class="card-img-top" src="images/1.jpg" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Men Printed Round Neck Cotton White T-Shirt</h5>
+            <p class="card-text">&#11088;&#11088;&#11088;&#11088;&#11088;</p>
+              <p>&#36;7.34</p>
+              
+              <button class="btn btn-primary" onclick="open_box1()">Order</button>
+          </div>
+          
+
+        </div>
+        <div class="cards">
+            <img class="card-img-top" src="images/2.jpg" alt="Card image cap">
+              <div class="card-body">
+              <h5 class="card-title">Women Round Neck Pure Cotton White T-Shirt</h5>
+              <p class="card-text">&#11088;&#11088;&#11088;&#11088;&#11088;</p>
+              <p>&#36;5.48</p>
+              <button class="btn btn-primary" onclick="open_box2()">Order</button>
+            </div>
+            
+  
+          </div>
+        
+        <div class="cards">
+          <img class="card-img-top" src="images/3.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">Men Round Neck Pure Cotton Purple T-Shirt</h5>
+            <p class="card-text">&#11088;&#11088;&#11088;&#11088;&#11088;</p>
+              <p>&#36;8.21</p>
+              <button class="btn btn-primary" onclick="open_box3()">Order</button>
+            
+          </div>
+
+        </div>
+        <div class="cards">
+            <img class="card-img-top" src="images/4.jpg" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Men Round Neck Pure Cotton Black T-Shirt</h5>
+              <p class="card-text">&#11088;&#11088;&#11088;&#11088;&#11088;</p>
+              <p>&#36;6.37</p>
+             <button class="btn btn-primary"  onclick="open_box4()">Order</button>
+             
+             
+              
+            </div>
+      </div>
+      </div>
+     
+
+      <!-- herer jfgasfhjvbasdifgvb
+       -->
+
+       <div id="good1" class="good">
+        <img src="images/1.jpg" alt="Candle" id="Images">
+             
+             
+       <button onclick="close_box1()" >&#x2716</button>
+        <h5 class="card-title">Men Printed Round Neck Cotton White T-Shirt</h>
+            <p>&#36;7.34</p>
+            <span>Please verify the below exchange rate</span><br>
+            <ul id="index-q1">
+               <l1></l1>
+               
+                </ul>
+        
+        <form onsubmit="function1()" >
+            <!-- To take the username -->
+            <div class="input-group mb-2 mr-sm-2">
+                <div class="input-group-prepend">
+                    <label class="input-group-text" for="Username1">Your name</label>
+                </div>
+                    <input type="text" class="form-control" id="Username1" name="Username"  required>
+            </div>
+
+        <!-- To take the quantity -->
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="Quantity1"> Quantity </label>
+            </div>
+                <input type="number" class="form-control" id="Quantity1" placeholder="-- Please Select Quantity --" required min="1" name="Quantity" >
+        </div>
+
+        <!-- To take the address -->
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="Address1"> Address</label>
+            </div>
+                <input type="text" class="form-control" id="Address1" name="Address" required>
+        </div>
+
+        <!-- To take phone number -->
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="Number1"> Phone number</label>
+            </div>
+                <input type="text" class="form-control" id="Number1" pattern="[0-9]{10,}" name="Number" title="Please Enter Your 10 Digit Number" required>
+        </div>
+            
+        <button type="submit" class="btn btn-primary" onclick="red1()" >Order</button>
+        
+        </form>
+      
+    </div>
+        
+
+
+
+
+    <div id="good2" class="good">
+      <img src="images/2.jpg" alt="Candle" id="Images">
+           
+           
+     <button onclick="close_box2()" >&#x2716</button>
+      
+      <h5 class="card-title">Women Round Neck Pure Cotton White T-Shirt</h>
+        <p>&#36;5.48</p>
+        <span>Please verify the below exchange rate</span><br>
+        <ul id="index-q2">
+           <l1></l1>
+           
+            </ul>
+      
+      <form onsubmit="function1()" >
+          <!-- To take the username -->
+          <div class="input-group mb-2 mr-sm-2">
+              <div class="input-group-prepend">
+                  <label class="input-group-text" for="Username2">Your name</label>
+              </div>
+                  <input type="text" class="form-control" id="Username2" name="Username" required>
+          </div>
+
+      <!-- To take the quantity -->
+      <div class="input-group mb-2 mr-sm-2">
+          <div class="input-group-prepend">
+              <label class="input-group-text" for="Quantity2"> Quantity </label>
+          </div>
+              <input type="number" class="form-control" id="Quantity2" placeholder="-- Please Select Quantity --" required min="1" name="Quantity" >
+      </div>
+
+      <!-- To take the address -->
+      <div class="input-group mb-2 mr-sm-2">
+          <div class="input-group-prepend">
+              <label class="input-group-text" for="Address2"> Address</label>
+          </div>
+              <input type="text" class="form-control" id="Address2" name="Address" required>
+      </div>
+
+      <!-- To take phone number -->
+      <div class="input-group mb-2 mr-sm-2">
+          <div class="input-group-prepend">
+              <label class="input-group-text" for="Number2"> Phone number</label>
+          </div>
+              <input type="text" class="form-control" id="Number2" pattern="[0-9]{10,}" name="Number" title="Please Enter Your 10 Digit Number" required>
+      </div>
+          
+      <button type="submit" class="btn btn-primary" onclick="red2()" >Order</button>
+      
+      </form>
+    
+  </div>
+
+
+
+  <div id="good3" class="good">
+    <img src="images/3.jpg" alt="Candle" id="Images">
+         
+         
+   <button onclick="close_box3()" >&#x2716</button>
+    
+    <h5 class="card-title">Men Round Neck Pure Cotton Purple T-Shirt</h>
+        <p>&#36;8.21</p>
+        <span>Please verify the below exchange rate</span><br>
+        <ul id="index-q3">
+           <l1></l1>
+           
+            </ul>
+    
+    <form onsubmit="function1()" method="get">
+        <!-- To take the username -->
+        <div class="input-group mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="Username3">Your name</label>
+            </div>
+                <input type="text" class="form-control" id="Username3" name="Username"  required>
+        </div>
+
+    <!-- To take the quantity -->
+    <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="Quantity3"> Quantity </label>
+        </div>
+            <input type="number" class="form-control" id="Quantity3" placeholder="-- Please Select Quantity --" required min="1" name="Quantity" >
+    </div>
+
+    <!-- To take the address -->
+    <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="Address3"> Address</label>
+        </div>
+            <input type="text" class="form-control" id="Address3" name="Address" required>
+    </div>
+
+    <!-- To take phone number -->
+    <div class="input-group mb-2 mr-sm-2">
+        <div class="input-group-prepend">
+            <label class="input-group-text" for="Number3"> Phone number</label>
+        </div>
+            <input type="text" class="form-control" id="Number3" pattern="[0-9]{10,}" name="Number" title="Please Enter Your 10 Digit Number" required>
+    </div>
+        
+    <button type="submit" class="btn btn-primary" onclick="red3()">Order</button>
+    
+    </form>
+  
+</div>
+
+
+
+
+
+<div id="good4" class="good">
+  <img src="images/4.jpg" alt="Candle" id="Images">
+       
+       
+ <button onclick="close_box4()" >&#x2716</button>
+  <h5 class="card-title">Men Round Neck Pure  Cotton <br> Black T-Shirt</h>
+    <p>&#36;6.37</p>
+    <p >Please verify the below exchange rate  </p>
+    <ul id="index-q4" >
+       <l1></l1>
+       
+        </ul>
+  
+  <form onsubmit="function1()" >
+      <!-- To take the username -->
+      <div class="input-group mb-2 mr-sm-2">
+          <div class="input-group-prepend">
+              <label class="input-group-text" for="Username4">Your name</label>
+          </div>
+              <input type="text" class="form-control" id="Username4" name="Username" required>
+      </div>
+
+  <!-- To take the quantity -->
+  <div class="input-group mb-2 mr-sm-2">
+      <div class="input-group-prepend">
+          <label class="input-group-text" for="Quantity4"> Quantity </label>
+      </div>
+          <input type="number" class="form-control" id="Quantity4" placeholder="-- Please Select Quantity --" required min="1" name="Quantity" >
+  </div>
+
+  <!-- To take the address -->
+  <div class="input-group mb-2 mr-sm-2">
+      <div class="input-group-prepend">
+          <label class="input-group-text" for="Address4"> Address</label>
+      </div>
+          <input type="text" class="form-control" id="Address4" name="Address" required>
+  </div>
+
+  <!-- To take phone number -->
+  <div class="input-group mb-2 mr-sm-2">
+      <div class="input-group-prepend">
+          <label class="input-group-text" for="Number4"> Phone number</label>
+      </div>
+          <input type="text" class="form-control" id="Number4" pattern="[0-9]{10,}" name="Number" title="Please Enter Your 10 Digit Number" required>
+  </div>
+      
+  <button type="submit" class="btn btn-primary" onclick="red4()">Order</button>
+  
+  </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+      <footer>
+        <div class="icon">
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-instagram"></a>
+        </div>
+        <div class="copy">
+            <p>	Copyright ©2024 All rights reserved  </p>
+        </div>
+      </footer>
+</html>
